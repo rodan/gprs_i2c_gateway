@@ -40,7 +40,7 @@
   Honeywell HSCMRNN030PA2A3 pressure sensor - mouser part: 785-HSCMRNN030PA2A3
 
   Author:          Petre Rodan <petre.rodan@simplex.ro>
-  Available from:  https://github.com/rodan/solar-sensor_msp430
+  Available from:  https://github.com/rodan/gprs_i2c_gateway
   License:         GNU GPLv3
 
 [1]  https://github.com/rodan/solar-sensor
