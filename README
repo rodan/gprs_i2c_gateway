@@ -1,0 +1,48 @@
+
+  this is a re-run of a previous project [1], 
+  but instead of the Atmel AVR 328p a Texas Instruments MSP430F5510 is used
+
+  it is still under development, but the firmware will be able to
+
+   - talk to a number of i2c sensors
+   - buffer data into a fram memory chip
+   - send data via gprs to an online server
+   - use a minimal amount of energy
+
+  there are 3 components in this repository:
+  firmware  - contains the C code for the microcontroller
+  hardware  - open source hardware for the main board
+  server    - server-side implementation of the comm protocol
+
+  * library dependencies for the included avr software:
+  none - all is included in the repo
+
+  * compiler toolchain used (gentoo):
+        msp430-gcc-4.6.3_p20120406
+        msp430mcu-20120716
+        msp430-binutils-2.22_p20120911
+        msp430-libc-20120716
+        mspdebug-0.21
+
+  * development is done using
+        MSP430-5510STK [2]
+        
+
+  * dependencies for the server-side software:
+
+  sqlite      http://www.sqlite.org/
+  gnuplot     http://www.gnuplot.info/
+
+
+  * sensors used:
+
+  SHT15 Humidity and Temperature Sensor
+  Honeywell HSCMRNN030PA2A3 pressure sensor - mouser part: 785-HSCMRNN030PA2A3
+
+  Author:          Petre Rodan <petre.rodan@simplex.ro>
+  Available from:  https://github.com/rodan/solar-sensor_msp430
+  License:         GNU GPLv3
+
+[1]  https://github.com/rodan/solar-sensor
+[2]  https://www.olimex.com/Products/MSP430/Starter/MSP430-5510STK/
+
