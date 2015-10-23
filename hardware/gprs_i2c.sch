@@ -13098,7 +13098,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="GND53" library="SparkFun" deviceset="GND" device=""/>
 <part name="C21" library="rcl" deviceset="C-EU" device="C1206" value="100uF"/>
 <part name="GND19" library="SparkFun" deviceset="GND" device=""/>
-<part name="TP103" library="testpad" deviceset="TP" device="TP12R"/>
+<part name="TP7" library="testpad" deviceset="TP" device="TP12R"/>
 <part name="TP102" library="testpad" deviceset="TP" device="TP12R"/>
 <part name="TP1" library="testpad" deviceset="TP" device="TP12R"/>
 <part name="GND55" library="SparkFun" deviceset="GND" device=""/>
@@ -13279,7 +13279,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <instance part="GND53" gate="1" x="287.02" y="279.4"/>
 <instance part="C21" gate="G$1" x="294.64" y="287.02"/>
 <instance part="GND19" gate="1" x="294.64" y="279.4"/>
-<instance part="TP103" gate="G$1" x="91.44" y="292.1" rot="R270"/>
+<instance part="TP7" gate="G$1" x="91.44" y="292.1" rot="R270"/>
 <instance part="TP102" gate="G$1" x="60.96" y="248.92"/>
 <instance part="TP1" gate="G$1" x="17.78" y="185.42"/>
 <instance part="GND55" gate="1" x="17.78" y="172.72"/>
@@ -13791,7 +13791,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <pinref part="U1" gate="G$1" pin="OUT"/>
 <pinref part="C1" gate="G$1" pin="1"/>
 <pinref part="+3V1" gate="G$1" pin="+3V3"/>
-<pinref part="TP103" gate="G$1" pin="TP"/>
+<pinref part="TP7" gate="G$1" pin="TP"/>
 <wire x1="83.82" y1="292.1" x2="88.9" y2="292.1" width="0.1524" layer="91"/>
 </segment>
 <segment>
@@ -14626,6 +14626,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <approved hash="204,1,396.24,165.1,U$1,42,,,,"/>
 <approved hash="204,1,396.24,167.64,U$1,43,,,,"/>
 <approved hash="104,1,396.24,170.18,U$1,44,GND,,,"/>
+<approved hash="104,1,396.24,175.26,U$1,46,CHG,,,"/>
 <approved hash="104,1,162.56,289.56,U$6G$1,VSS,GND,,,"/>
 <approved hash="205,1,195.58,177.8,IC1VBAT@1,VBAT,,,,"/>
 <approved hash="205,1,195.58,177.8,IC1VBAT@2,VBAT,,,,"/>
