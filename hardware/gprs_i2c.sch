@@ -12826,6 +12826,80 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </deviceset>
 </devicesets>
 </library>
+<library name="Simplex-Battery">
+<description>finest footprints by petre rodan</description>
+<packages>
+<package name="HU2032-LF">
+<description>&lt;b&gt;Renata HU2032-LF&lt;/b&gt; Li 2032 battery holder</description>
+<pad name="+@1" x="-13.6" y="1.27" drill="0.9" diameter="2.1844" shape="octagon" rot="R270"/>
+<pad name="+" x="-13.6" y="-1.27" drill="0.9" diameter="2.1844" shape="octagon" rot="R270"/>
+<pad name="-" x="13.6" y="0" drill="0.9" diameter="2.1844" shape="octagon" rot="R270"/>
+<text x="-3.54" y="-0.37" size="1.27" layer="25" ratio="10">&gt;NAME</text>
+<text x="-3.505" y="-2.98" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
+<wire x1="-14.25" y1="3.5" x2="-11.5" y2="3.5" width="0.127" layer="21"/>
+<wire x1="11.5" y1="3.5" x2="14.25" y2="3.5" width="0.127" layer="21"/>
+<wire x1="-14.25" y1="-3.5" x2="-11.5" y2="-3.5" width="0.127" layer="21"/>
+<wire x1="11.5" y1="-3.5" x2="14.25" y2="-3.5" width="0.127" layer="21"/>
+<wire x1="-14.25" y1="3.5" x2="-14.25" y2="-3.5" width="0.127" layer="21"/>
+<wire x1="14.25" y1="3.5" x2="14.25" y2="-3.5" width="0.127" layer="21"/>
+<wire x1="-8.9" y1="8" x2="-7.6" y2="8" width="0.127" layer="21"/>
+<wire x1="-7.6" y1="8" x2="7.6" y2="8" width="0.127" layer="21"/>
+<wire x1="7.6" y1="8" x2="9" y2="8" width="0.127" layer="21"/>
+<wire x1="-8.9" y1="-8" x2="-7.6" y2="-8" width="0.127" layer="21"/>
+<wire x1="-7.6" y1="-8" x2="-7" y2="-8" width="0.127" layer="21"/>
+<wire x1="-7" y1="-8" x2="-5" y2="-6" width="0.127" layer="21"/>
+<wire x1="-5" y1="-6" x2="5" y2="-6" width="0.127" layer="21"/>
+<wire x1="5" y1="-6" x2="7" y2="-8" width="0.127" layer="21"/>
+<wire x1="7" y1="-8" x2="7.6" y2="-8" width="0.127" layer="21"/>
+<wire x1="7.6" y1="-8" x2="8.9" y2="-8" width="0.127" layer="21"/>
+<wire x1="-8.9" y1="-8" x2="-11.5" y2="-3.5" width="0.127" layer="21" curve="-24.794909"/>
+<wire x1="8.9" y1="-8" x2="11.5" y2="-3.5" width="0.127" layer="21" curve="25.024112"/>
+<wire x1="-8.9" y1="8" x2="-11.5" y2="3.5" width="0.127" layer="21" curve="25.024112"/>
+<wire x1="9" y1="8" x2="11.5" y2="3.5" width="0.127" layer="21" curve="-24.706026"/>
+<text x="-2.5" y="-9.2" size="1.4224" layer="21" font="vector" ratio="12">2032</text>
+<text x="12.8" y="-5.6" size="1.6764" layer="21" font="vector" ratio="20">-</text>
+<text x="-14" y="-5.6" size="1.6764" layer="21" font="vector" ratio="20">+</text>
+<wire x1="-7.6" y1="8" x2="7.6" y2="8" width="0.127" layer="21" curve="-87.062399"/>
+<wire x1="-7.6" y1="-8" x2="7.6" y2="-8" width="0.127" layer="21" curve="87.062399"/>
+</package>
+</packages>
+<symbols>
+<symbol name="BATTERY">
+<description>battery with 1 hidden + pin</description>
+<wire x1="-2" y1="0.6" x2="-2" y2="0" width="0.4064" layer="94"/>
+<wire x1="-2.58" y1="0" x2="-2" y2="0" width="0.1524" layer="94"/>
+<wire x1="-2" y1="0" x2="-2" y2="-0.6" width="0.4064" layer="94"/>
+<wire x1="-0.6" y1="2.5" x2="-0.6" y2="0" width="0.4064" layer="94"/>
+<wire x1="-0.6" y1="0" x2="-0.04" y2="0" width="0.1524" layer="94"/>
+<wire x1="-0.6" y1="0" x2="-0.6" y2="-2.5" width="0.4064" layer="94"/>
+<text x="-1.84" y="3.675" size="1.778" layer="95">&gt;NAME</text>
+<text x="-1.84" y="-3.48" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="+" x="2.54" y="0" visible="pad" length="short" direction="pas" rot="R180"/>
+<pin name="-" x="-5.08" y="0" visible="pad" length="short" direction="pas"/>
+<pin name="+@1" x="0.64" y="1.1" visible="off" length="point" direction="pas" rot="R180"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="HU2032-LF" prefix="G">
+<description>&lt;b&gt;Renata HU2032&lt;/b&gt; Li battery holder</description>
+<gates>
+<gate name="BAT" symbol="BATTERY" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="HU2032-LF">
+<connects>
+<connect gate="BAT" pin="+" pad="+"/>
+<connect gate="BAT" pin="+@1" pad="+@1"/>
+<connect gate="BAT" pin="-" pad="-"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 <library name="Simplex-Fuses">
 <packages>
 <package name="1210">
@@ -12897,80 +12971,6 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <connects>
 <connect gate="G$1" pin="P$1" pad="1"/>
 <connect gate="G$1" pin="P$2" pad="2"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
-<library name="Simplex-Battery">
-<description>finest footprints by petre rodan</description>
-<packages>
-<package name="HU2032-LF">
-<description>&lt;b&gt;Renata HU2032-LF&lt;/b&gt; Li 2032 battery holder</description>
-<pad name="+@1" x="-13.6" y="1.27" drill="0.9" diameter="2.1844" shape="octagon" rot="R270"/>
-<pad name="+" x="-13.6" y="-1.27" drill="0.9" diameter="2.1844" shape="octagon" rot="R270"/>
-<pad name="-" x="13.6" y="0" drill="0.9" diameter="2.1844" shape="octagon" rot="R270"/>
-<text x="-3.54" y="-0.37" size="1.27" layer="25" ratio="10">&gt;NAME</text>
-<text x="-3.505" y="-2.98" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
-<wire x1="-14.25" y1="3.5" x2="-11.5" y2="3.5" width="0.127" layer="21"/>
-<wire x1="11.5" y1="3.5" x2="14.25" y2="3.5" width="0.127" layer="21"/>
-<wire x1="-14.25" y1="-3.5" x2="-11.5" y2="-3.5" width="0.127" layer="21"/>
-<wire x1="11.5" y1="-3.5" x2="14.25" y2="-3.5" width="0.127" layer="21"/>
-<wire x1="-14.25" y1="3.5" x2="-14.25" y2="-3.5" width="0.127" layer="21"/>
-<wire x1="14.25" y1="3.5" x2="14.25" y2="-3.5" width="0.127" layer="21"/>
-<wire x1="-8.9" y1="8" x2="-7.6" y2="8" width="0.127" layer="21"/>
-<wire x1="-7.6" y1="8" x2="7.6" y2="8" width="0.127" layer="21"/>
-<wire x1="7.6" y1="8" x2="9" y2="8" width="0.127" layer="21"/>
-<wire x1="-8.9" y1="-8" x2="-7.6" y2="-8" width="0.127" layer="21"/>
-<wire x1="-7.6" y1="-8" x2="-7" y2="-8" width="0.127" layer="21"/>
-<wire x1="-7" y1="-8" x2="-5" y2="-6" width="0.127" layer="21"/>
-<wire x1="-5" y1="-6" x2="5" y2="-6" width="0.127" layer="21"/>
-<wire x1="5" y1="-6" x2="7" y2="-8" width="0.127" layer="21"/>
-<wire x1="7" y1="-8" x2="7.6" y2="-8" width="0.127" layer="21"/>
-<wire x1="7.6" y1="-8" x2="8.9" y2="-8" width="0.127" layer="21"/>
-<wire x1="-8.9" y1="-8" x2="-11.5" y2="-3.5" width="0.127" layer="21" curve="-24.794909"/>
-<wire x1="8.9" y1="-8" x2="11.5" y2="-3.5" width="0.127" layer="21" curve="25.024112"/>
-<wire x1="-8.9" y1="8" x2="-11.5" y2="3.5" width="0.127" layer="21" curve="25.024112"/>
-<wire x1="9" y1="8" x2="11.5" y2="3.5" width="0.127" layer="21" curve="-24.706026"/>
-<text x="-2.5" y="-9.2" size="1.4224" layer="21" font="vector" ratio="12">2032</text>
-<text x="12.8" y="-5.6" size="1.6764" layer="21" font="vector" ratio="20">-</text>
-<text x="-14" y="-5.6" size="1.6764" layer="21" font="vector" ratio="20">+</text>
-<wire x1="-7.6" y1="8" x2="7.6" y2="8" width="0.127" layer="21" curve="-87.062399"/>
-<wire x1="-7.6" y1="-8" x2="7.6" y2="-8" width="0.127" layer="21" curve="87.062399"/>
-</package>
-</packages>
-<symbols>
-<symbol name="BATTERY">
-<description>battery with 1 hidden + pin</description>
-<wire x1="-2" y1="0.6" x2="-2" y2="0" width="0.4064" layer="94"/>
-<wire x1="-2.58" y1="0" x2="-2" y2="0" width="0.1524" layer="94"/>
-<wire x1="-2" y1="0" x2="-2" y2="-0.6" width="0.4064" layer="94"/>
-<wire x1="-0.6" y1="2.5" x2="-0.6" y2="0" width="0.4064" layer="94"/>
-<wire x1="-0.6" y1="0" x2="-0.04" y2="0" width="0.1524" layer="94"/>
-<wire x1="-0.6" y1="0" x2="-0.6" y2="-2.5" width="0.4064" layer="94"/>
-<text x="-1.84" y="3.675" size="1.778" layer="95">&gt;NAME</text>
-<text x="-1.84" y="-3.48" size="1.778" layer="96">&gt;VALUE</text>
-<pin name="+" x="2.54" y="0" visible="pad" length="short" direction="pas" rot="R180"/>
-<pin name="-" x="-5.08" y="0" visible="pad" length="short" direction="pas"/>
-<pin name="+@1" x="0.64" y="1.1" visible="off" length="point" direction="pas" rot="R180"/>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="HU2032-LF" prefix="G">
-<description>&lt;b&gt;Renata HU2032&lt;/b&gt; Li battery holder</description>
-<gates>
-<gate name="BAT" symbol="BATTERY" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="HU2032-LF">
-<connects>
-<connect gate="BAT" pin="+" pad="+"/>
-<connect gate="BAT" pin="+@1" pad="+@1"/>
-<connect gate="BAT" pin="-" pad="-"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -13109,7 +13109,6 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="U$17" library="Simplex-ICs" deviceset="FM24V" device=""/>
 <part name="GND59" library="SparkFun" deviceset="GND" device=""/>
 <part name="GND61" library="SparkFun" deviceset="GND" device=""/>
-<part name="U$9" library="Simplex-Fuses" deviceset="RESETTABLE" device="_0805"/>
 <part name="C3" library="rcl" deviceset="C-EU" device="C0805" value="10uF"/>
 <part name="GND42" library="SparkFun" deviceset="GND" device=""/>
 <part name="U$3" library="Simplex-Connectors" deviceset="SIM" device="_MOLEX_7880-0001"/>
@@ -13151,6 +13150,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="X1" library="Simplex-Connectors" deviceset="MOLEX_6" device="VERTICAL" value="prog"/>
 <part name="C7" library="rcl" deviceset="C-EU" device="C1206" value="10uF"/>
 <part name="GND23" library="SparkFun" deviceset="GND" device=""/>
+<part name="U$5" library="Simplex-Fuses" deviceset="RESETTABLE" device="_0805"/>
 </parts>
 <sheets>
 <sheet>
@@ -13292,7 +13292,6 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <instance part="U$17" gate="G$1" x="360.68" y="279.4"/>
 <instance part="GND59" gate="1" x="381" y="271.78"/>
 <instance part="GND61" gate="1" x="345.44" y="271.78"/>
-<instance part="U$9" gate="G$1" x="142.24" y="292.1"/>
 <instance part="C3" gate="G$1" x="33.02" y="279.4"/>
 <instance part="GND42" gate="1" x="134.62" y="81.28"/>
 <instance part="U$3" gate="G$1" x="149.86" y="104.14"/>
@@ -13334,6 +13333,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <instance part="X1" gate="G$1" x="45.72" y="38.1" rot="MR180"/>
 <instance part="C7" gate="G$1" x="91.44" y="279.4"/>
 <instance part="GND23" gate="1" x="91.44" y="266.7"/>
+<instance part="U$5" gate="G$1" x="142.24" y="292.1"/>
 </instances>
 <busses>
 </busses>
@@ -13907,7 +13907,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <label x="152.4" y="292.1" size="1.778" layer="95"/>
 <pinref part="U$6" gate="G$1" pin="IN"/>
 <wire x1="147.32" y1="292.1" x2="162.56" y2="292.1" width="0.1524" layer="91"/>
-<pinref part="U$9" gate="G$1" pin="P$2"/>
+<pinref part="U$5" gate="G$1" pin="P$2"/>
 </segment>
 <segment>
 <pinref part="R22" gate="G$1" pin="1"/>
@@ -13956,9 +13956,9 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <label x="76.2" y="43.18" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U$1" gate="G$1" pin="45"/>
-<wire x1="396.24" y1="172.72" x2="401.32" y2="172.72" width="0.1524" layer="91"/>
-<label x="398.78" y="172.72" size="1.778" layer="95"/>
+<pinref part="U$1" gate="G$1" pin="15"/>
+<wire x1="345.44" y1="144.78" x2="332.74" y2="144.78" width="0.1524" layer="91"/>
+<label x="335.28" y="144.78" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="BAT" class="0">
@@ -14069,7 +14069,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </segment>
 <segment>
 <pinref part="U$1" gate="G$1" pin="29"/>
-<wire x1="396.24" y1="132.08" x2="403.86" y2="132.08" width="0.1524" layer="91"/>
+<wire x1="396.24" y1="132.08" x2="401.32" y2="132.08" width="0.1524" layer="91"/>
 <label x="398.78" y="132.08" size="1.778" layer="95"/>
 </segment>
 </net>
@@ -14107,8 +14107,8 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </segment>
 <segment>
 <pinref part="U$1" gate="G$1" pin="18"/>
-<wire x1="330.2" y1="137.16" x2="345.44" y2="137.16" width="0.1524" layer="91"/>
-<label x="332.74" y="137.16" size="1.778" layer="95"/>
+<wire x1="332.74" y1="137.16" x2="345.44" y2="137.16" width="0.1524" layer="91"/>
+<label x="335.28" y="137.16" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="RTS" class="0">
@@ -14119,8 +14119,8 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </segment>
 <segment>
 <pinref part="U$1" gate="G$1" pin="17"/>
-<wire x1="345.44" y1="139.7" x2="330.2" y2="139.7" width="0.1524" layer="91"/>
-<label x="332.74" y="139.7" size="1.778" layer="95"/>
+<wire x1="345.44" y1="139.7" x2="332.74" y2="139.7" width="0.1524" layer="91"/>
+<label x="335.28" y="139.7" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="DTR" class="0">
@@ -14131,8 +14131,8 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </segment>
 <segment>
 <pinref part="U$1" gate="G$1" pin="20"/>
-<wire x1="345.44" y1="132.08" x2="330.2" y2="132.08" width="0.1524" layer="91"/>
-<label x="332.74" y="132.08" size="1.778" layer="95"/>
+<wire x1="345.44" y1="132.08" x2="332.74" y2="132.08" width="0.1524" layer="91"/>
+<label x="335.28" y="132.08" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="RI" class="0">
@@ -14143,8 +14143,8 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </segment>
 <segment>
 <pinref part="U$1" gate="G$1" pin="19"/>
-<wire x1="330.2" y1="134.62" x2="345.44" y2="134.62" width="0.1524" layer="91"/>
-<label x="332.74" y="134.62" size="1.778" layer="95"/>
+<wire x1="332.74" y1="134.62" x2="345.44" y2="134.62" width="0.1524" layer="91"/>
+<label x="335.28" y="134.62" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$46" class="0">
@@ -14162,7 +14162,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </segment>
 <segment>
 <pinref part="U$1" gate="G$1" pin="30"/>
-<wire x1="396.24" y1="134.62" x2="403.86" y2="134.62" width="0.1524" layer="91"/>
+<wire x1="396.24" y1="134.62" x2="401.32" y2="134.62" width="0.1524" layer="91"/>
 <label x="398.78" y="134.62" size="1.778" layer="95"/>
 </segment>
 </net>
@@ -14385,9 +14385,9 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <label x="190.5" y="302.26" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U$1" gate="G$1" pin="46"/>
-<wire x1="396.24" y1="175.26" x2="401.32" y2="175.26" width="0.1524" layer="91"/>
-<label x="398.78" y="175.26" size="1.778" layer="95"/>
+<pinref part="U$1" gate="G$1" pin="16"/>
+<wire x1="345.44" y1="142.24" x2="332.74" y2="142.24" width="0.1524" layer="91"/>
+<label x="335.28" y="142.24" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$7" class="0">
@@ -14433,7 +14433,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <segment>
 <pinref part="U$1" gate="G$1" pin="35"/>
 <wire x1="396.24" y1="147.32" x2="401.32" y2="147.32" width="0.1524" layer="91"/>
-<label x="401.32" y="147.32" size="1.778" layer="95"/>
+<label x="398.78" y="147.32" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="Q2" gate="G$1" pin="S"/>
@@ -14459,7 +14459,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <segment>
 <pinref part="U$1" gate="G$1" pin="36"/>
 <wire x1="396.24" y1="149.86" x2="401.32" y2="149.86" width="0.1524" layer="91"/>
-<label x="401.32" y="149.86" size="1.778" layer="95"/>
+<label x="398.78" y="149.86" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="Q3" gate="G$1" pin="S"/>
@@ -14595,7 +14595,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <segment>
 <wire x1="137.16" y1="292.1" x2="127" y2="292.1" width="0.1524" layer="91"/>
 <label x="127" y="292.1" size="1.778" layer="95"/>
-<pinref part="U$9" gate="G$1" pin="P$1"/>
+<pinref part="U$5" gate="G$1" pin="P$1"/>
 </segment>
 <segment>
 <wire x1="81.28" y1="38.1" x2="76.2" y2="38.1" width="0.1524" layer="91"/>
