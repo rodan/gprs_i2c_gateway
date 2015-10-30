@@ -13151,6 +13151,8 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="C7" library="rcl" deviceset="C-EU" device="C1206" value="10uF"/>
 <part name="GND23" library="SparkFun" deviceset="GND" device=""/>
 <part name="U$5" library="Simplex-Fuses" deviceset="RESETTABLE" device="_0805"/>
+<part name="GND43" library="SparkFun" deviceset="GND" device=""/>
+<part name="R5" library="rcl" deviceset="R-EU_" device="R0805W" value="470"/>
 </parts>
 <sheets>
 <sheet>
@@ -13334,6 +13336,8 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <instance part="C7" gate="G$1" x="91.44" y="279.4"/>
 <instance part="GND23" gate="1" x="91.44" y="266.7"/>
 <instance part="U$5" gate="G$1" x="142.24" y="292.1"/>
+<instance part="GND43" gate="1" x="223.52" y="116.84"/>
+<instance part="R5" gate="G$1" x="340.36" y="144.78"/>
 </instances>
 <busses>
 </busses>
@@ -13746,6 +13750,16 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <pinref part="GND23" gate="1" pin="GND"/>
 <wire x1="91.44" y1="274.32" x2="91.44" y2="269.24" width="0.1524" layer="91"/>
 </segment>
+<segment>
+<pinref part="U$18" gate="G$1" pin="5"/>
+<pinref part="GND43" gate="1" pin="GND"/>
+<wire x1="215.9" y1="134.62" x2="223.52" y2="134.62" width="0.1524" layer="91"/>
+<wire x1="223.52" y1="134.62" x2="223.52" y2="121.92" width="0.1524" layer="91"/>
+<pinref part="U$18" gate="G$1" pin="4"/>
+<wire x1="223.52" y1="121.92" x2="223.52" y2="119.38" width="0.1524" layer="91"/>
+<wire x1="215.9" y1="121.92" x2="223.52" y2="121.92" width="0.1524" layer="91"/>
+<junction x="223.52" y="121.92"/>
+</segment>
 </net>
 <net name="VIN" class="0">
 <segment>
@@ -13956,9 +13970,9 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <label x="76.2" y="43.18" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U$1" gate="G$1" pin="15"/>
-<wire x1="345.44" y1="144.78" x2="332.74" y2="144.78" width="0.1524" layer="91"/>
-<label x="335.28" y="144.78" size="1.778" layer="95"/>
+<wire x1="335.28" y1="144.78" x2="330.2" y2="144.78" width="0.1524" layer="91"/>
+<label x="332.74" y="144.78" size="1.778" layer="95"/>
+<pinref part="R5" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="BAT" class="0">
@@ -14623,6 +14637,12 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <wire x1="347.98" y1="246.38" x2="350.52" y2="246.38" width="0.1524" layer="91"/>
 </segment>
 </net>
+<net name="N$11" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="15"/>
+<pinref part="R5" gate="G$1" pin="2"/>
+</segment>
+</net>
 </nets>
 </sheet>
 </sheets>
@@ -14639,7 +14659,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <approved hash="204,1,396.24,165.1,U$1,42,,,,"/>
 <approved hash="204,1,396.24,167.64,U$1,43,,,,"/>
 <approved hash="104,1,396.24,170.18,U$1,44,GND,,,"/>
-<approved hash="104,1,396.24,175.26,U$1,46,CHG,,,"/>
+<approved hash="204,1,396.24,175.26,U$1,46,,,,"/>
 <approved hash="104,1,162.56,289.56,U$6G$1,VSS,GND,,,"/>
 <approved hash="205,1,195.58,177.8,IC1VBAT@1,VBAT,,,,"/>
 <approved hash="205,1,195.58,177.8,IC1VBAT@2,VBAT,,,,"/>

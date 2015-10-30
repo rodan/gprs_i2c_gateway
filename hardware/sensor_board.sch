@@ -8819,14 +8819,12 @@ Sensirion humdity sensor. Schematic element and footprint proven. Spark Fun Elec
 <part name="X5" library="Simplex-Connectors" deviceset="MOLEX_4" device="HORIZONTAL" value="i2c"/>
 <part name="GND7" library="SparkFun" deviceset="GND" device=""/>
 <part name="+3V2" library="supply1" deviceset="+3V3" device=""/>
-<part name="C7" library="rcl" deviceset="C-EU" device="C0805" value="100nF"/>
 <part name="C15" library="rcl" deviceset="C-EU" device="C1206" value="10uF"/>
 <part name="R5" library="rcl" deviceset="R-EU_" device="R0805W" value="330"/>
 <part name="R7" library="rcl" deviceset="R-EU_" device="R0805W" value="330"/>
 <part name="R8" library="rcl" deviceset="R-EU_" device="R0805W" value="10k"/>
 <part name="R13" library="rcl" deviceset="R-EU_" device="R0805W" value="10k"/>
 <part name="GND15" library="SparkFun" deviceset="GND" device=""/>
-<part name="GND23" library="SparkFun" deviceset="GND" device=""/>
 <part name="U$1" library="SparkFun-Sensors" deviceset="SHT1X" device="SMD"/>
 <part name="+3V1" library="supply1" deviceset="+3V3" device=""/>
 <part name="GND1" library="SparkFun" deviceset="GND" device=""/>
@@ -8846,27 +8844,25 @@ Sensirion humdity sensor. Schematic element and footprint proven. Spark Fun Elec
 <instances>
 <instance part="FRAME1" gate="G$1" x="355.6" y="0"/>
 <instance part="U$7" gate="G$1" x="444.5" y="27.94"/>
-<instance part="X5" gate="G$1" x="162.56" y="38.1"/>
-<instance part="GND7" gate="1" x="154.94" y="25.4"/>
-<instance part="+3V2" gate="G$1" x="144.78" y="66.04"/>
-<instance part="C7" gate="G$1" x="99.06" y="50.8" rot="R180"/>
-<instance part="C15" gate="G$1" x="109.22" y="53.34"/>
-<instance part="R5" gate="G$1" x="137.16" y="40.64" rot="MR0"/>
-<instance part="R7" gate="G$1" x="127" y="38.1" rot="MR0"/>
-<instance part="R8" gate="G$1" x="129.54" y="50.8" rot="MR90"/>
-<instance part="R13" gate="G$1" x="119.38" y="50.8" rot="MR90"/>
-<instance part="GND15" gate="1" x="109.22" y="45.72"/>
-<instance part="GND23" gate="1" x="99.06" y="45.72"/>
-<instance part="U$1" gate="G$1" x="121.92" y="88.9" rot="R180"/>
-<instance part="+3V1" gate="G$1" x="144.78" y="99.06"/>
-<instance part="GND1" gate="1" x="137.16" y="76.2"/>
-<instance part="+3V3" gate="G$1" x="170.18" y="99.06"/>
-<instance part="GND2" gate="1" x="177.8" y="76.2"/>
-<instance part="C1" gate="G$1" x="144.78" y="83.82" rot="R180"/>
-<instance part="C2" gate="G$1" x="170.18" y="83.82" rot="R180"/>
-<instance part="GND3" gate="1" x="144.78" y="76.2"/>
-<instance part="GND4" gate="1" x="170.18" y="76.2"/>
-<instance part="U$2" gate="G$1" x="193.04" y="86.36"/>
+<instance part="X5" gate="G$1" x="337.82" y="30.48"/>
+<instance part="GND7" gate="1" x="330.2" y="17.78"/>
+<instance part="+3V2" gate="G$1" x="320.04" y="58.42"/>
+<instance part="C15" gate="G$1" x="284.48" y="45.72"/>
+<instance part="R5" gate="G$1" x="312.42" y="33.02" rot="MR0"/>
+<instance part="R7" gate="G$1" x="302.26" y="30.48" rot="MR0"/>
+<instance part="R8" gate="G$1" x="304.8" y="43.18" rot="MR90"/>
+<instance part="R13" gate="G$1" x="294.64" y="43.18" rot="MR90"/>
+<instance part="GND15" gate="1" x="284.48" y="38.1"/>
+<instance part="U$1" gate="G$1" x="297.18" y="81.28" rot="R180"/>
+<instance part="+3V1" gate="G$1" x="320.04" y="91.44"/>
+<instance part="GND1" gate="1" x="312.42" y="68.58"/>
+<instance part="+3V3" gate="G$1" x="345.44" y="91.44"/>
+<instance part="GND2" gate="1" x="353.06" y="68.58"/>
+<instance part="C1" gate="G$1" x="320.04" y="76.2" rot="R180"/>
+<instance part="C2" gate="G$1" x="345.44" y="76.2" rot="R180"/>
+<instance part="GND3" gate="1" x="320.04" y="68.58"/>
+<instance part="GND4" gate="1" x="345.44" y="68.58"/>
+<instance part="U$2" gate="G$1" x="368.3" y="78.74"/>
 </instances>
 <busses>
 </busses>
@@ -8874,8 +8870,8 @@ Sensirion humdity sensor. Schematic element and footprint proven. Spark Fun Elec
 <net name="GND" class="0">
 <segment>
 <pinref part="X5" gate="G$1" pin="4"/>
-<wire x1="160.02" y1="33.02" x2="154.94" y2="33.02" width="0.1524" layer="91"/>
-<wire x1="154.94" y1="33.02" x2="154.94" y2="27.94" width="0.1524" layer="91"/>
+<wire x1="335.28" y1="25.4" x2="330.2" y2="25.4" width="0.1524" layer="91"/>
+<wire x1="330.2" y1="25.4" x2="330.2" y2="20.32" width="0.1524" layer="91"/>
 <pinref part="GND7" gate="1" pin="GND"/>
 </segment>
 <segment>
@@ -8883,88 +8879,80 @@ Sensirion humdity sensor. Schematic element and footprint proven. Spark Fun Elec
 <pinref part="GND15" gate="1" pin="GND"/>
 </segment>
 <segment>
-<pinref part="C7" gate="G$1" pin="1"/>
-<pinref part="GND23" gate="1" pin="GND"/>
-</segment>
-<segment>
 <pinref part="U$1" gate="G$1" pin="GND"/>
 <pinref part="GND1" gate="1" pin="GND"/>
-<wire x1="129.54" y1="83.82" x2="137.16" y2="83.82" width="0.1524" layer="91"/>
-<wire x1="137.16" y1="83.82" x2="137.16" y2="78.74" width="0.1524" layer="91"/>
+<wire x1="304.8" y1="76.2" x2="312.42" y2="76.2" width="0.1524" layer="91"/>
+<wire x1="312.42" y1="76.2" x2="312.42" y2="71.12" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="GND2" gate="1" pin="GND"/>
-<wire x1="185.42" y1="83.82" x2="177.8" y2="83.82" width="0.1524" layer="91"/>
-<wire x1="177.8" y1="83.82" x2="177.8" y2="78.74" width="0.1524" layer="91"/>
+<wire x1="360.68" y1="76.2" x2="353.06" y2="76.2" width="0.1524" layer="91"/>
+<wire x1="353.06" y1="76.2" x2="353.06" y2="71.12" width="0.1524" layer="91"/>
 <pinref part="U$2" gate="G$1" pin="GND"/>
 </segment>
 <segment>
 <pinref part="C1" gate="G$1" pin="1"/>
 <pinref part="GND3" gate="1" pin="GND"/>
-<wire x1="144.78" y1="81.28" x2="144.78" y2="78.74" width="0.1524" layer="91"/>
+<wire x1="320.04" y1="73.66" x2="320.04" y2="71.12" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="C2" gate="G$1" pin="1"/>
 <pinref part="GND4" gate="1" pin="GND"/>
-<wire x1="170.18" y1="81.28" x2="170.18" y2="78.74" width="0.1524" layer="91"/>
+<wire x1="345.44" y1="73.66" x2="345.44" y2="71.12" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="+3V3" class="0">
 <segment>
 <pinref part="X5" gate="G$1" pin="3"/>
-<wire x1="160.02" y1="35.56" x2="144.78" y2="35.56" width="0.1524" layer="91"/>
+<wire x1="335.28" y1="27.94" x2="320.04" y2="27.94" width="0.1524" layer="91"/>
 <pinref part="+3V2" gate="G$1" pin="+3V3"/>
-<wire x1="144.78" y1="35.56" x2="144.78" y2="60.96" width="0.1524" layer="91"/>
+<wire x1="320.04" y1="27.94" x2="320.04" y2="53.34" width="0.1524" layer="91"/>
 <pinref part="R8" gate="G$1" pin="2"/>
-<wire x1="144.78" y1="60.96" x2="144.78" y2="63.5" width="0.1524" layer="91"/>
-<wire x1="129.54" y1="55.88" x2="129.54" y2="60.96" width="0.1524" layer="91"/>
-<wire x1="129.54" y1="60.96" x2="144.78" y2="60.96" width="0.1524" layer="91"/>
+<wire x1="320.04" y1="53.34" x2="320.04" y2="55.88" width="0.1524" layer="91"/>
+<wire x1="304.8" y1="48.26" x2="304.8" y2="53.34" width="0.1524" layer="91"/>
+<wire x1="304.8" y1="53.34" x2="320.04" y2="53.34" width="0.1524" layer="91"/>
 <pinref part="R13" gate="G$1" pin="2"/>
-<wire x1="129.54" y1="60.96" x2="119.38" y2="60.96" width="0.1524" layer="91"/>
-<wire x1="119.38" y1="60.96" x2="119.38" y2="55.88" width="0.1524" layer="91"/>
-<junction x="129.54" y="60.96"/>
-<junction x="144.78" y="60.96"/>
+<wire x1="304.8" y1="53.34" x2="294.64" y2="53.34" width="0.1524" layer="91"/>
+<wire x1="294.64" y1="53.34" x2="294.64" y2="48.26" width="0.1524" layer="91"/>
+<junction x="304.8" y="53.34"/>
+<junction x="320.04" y="53.34"/>
 <pinref part="C15" gate="G$1" pin="1"/>
-<wire x1="109.22" y1="55.88" x2="109.22" y2="60.96" width="0.1524" layer="91"/>
-<wire x1="109.22" y1="60.96" x2="119.38" y2="60.96" width="0.1524" layer="91"/>
-<pinref part="C7" gate="G$1" pin="2"/>
-<wire x1="109.22" y1="60.96" x2="99.06" y2="60.96" width="0.1524" layer="91"/>
-<wire x1="99.06" y1="60.96" x2="99.06" y2="55.88" width="0.1524" layer="91"/>
-<junction x="119.38" y="60.96"/>
-<junction x="109.22" y="60.96"/>
+<wire x1="284.48" y1="48.26" x2="284.48" y2="53.34" width="0.1524" layer="91"/>
+<wire x1="284.48" y1="53.34" x2="294.64" y2="53.34" width="0.1524" layer="91"/>
+<junction x="294.64" y="53.34"/>
 </segment>
 <segment>
 <pinref part="U$1" gate="G$1" pin="VDD"/>
 <pinref part="+3V1" gate="G$1" pin="+3V3"/>
-<wire x1="129.54" y1="91.44" x2="144.78" y2="91.44" width="0.1524" layer="91"/>
-<wire x1="144.78" y1="91.44" x2="144.78" y2="96.52" width="0.1524" layer="91"/>
+<wire x1="304.8" y1="83.82" x2="320.04" y2="83.82" width="0.1524" layer="91"/>
+<wire x1="320.04" y1="83.82" x2="320.04" y2="88.9" width="0.1524" layer="91"/>
 <pinref part="C1" gate="G$1" pin="2"/>
-<wire x1="144.78" y1="91.44" x2="144.78" y2="88.9" width="0.1524" layer="91"/>
-<junction x="144.78" y="91.44"/>
+<wire x1="320.04" y1="83.82" x2="320.04" y2="81.28" width="0.1524" layer="91"/>
+<junction x="320.04" y="83.82"/>
 </segment>
 <segment>
 <pinref part="+3V3" gate="G$1" pin="+3V3"/>
-<wire x1="170.18" y1="96.52" x2="170.18" y2="91.44" width="0.1524" layer="91"/>
-<wire x1="170.18" y1="91.44" x2="185.42" y2="91.44" width="0.1524" layer="91"/>
+<wire x1="345.44" y1="88.9" x2="345.44" y2="83.82" width="0.1524" layer="91"/>
+<wire x1="345.44" y1="83.82" x2="360.68" y2="83.82" width="0.1524" layer="91"/>
 <pinref part="C2" gate="G$1" pin="2"/>
-<wire x1="170.18" y1="88.9" x2="170.18" y2="91.44" width="0.1524" layer="91"/>
-<junction x="170.18" y="91.44"/>
+<wire x1="345.44" y1="81.28" x2="345.44" y2="83.82" width="0.1524" layer="91"/>
+<junction x="345.44" y="83.82"/>
 <pinref part="U$2" gate="G$1" pin="VCC"/>
 </segment>
 </net>
 <net name="SCL_H" class="0">
 <segment>
 <pinref part="X5" gate="G$1" pin="1"/>
-<wire x1="160.02" y1="40.64" x2="142.24" y2="40.64" width="0.1524" layer="91"/>
-<label x="149.86" y="40.64" size="1.778" layer="95"/>
+<wire x1="335.28" y1="33.02" x2="317.5" y2="33.02" width="0.1524" layer="91"/>
+<label x="325.12" y="33.02" size="1.778" layer="95"/>
 <pinref part="R5" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="SDA_H" class="0">
 <segment>
 <pinref part="X5" gate="G$1" pin="2"/>
-<wire x1="160.02" y1="38.1" x2="132.08" y2="38.1" width="0.1524" layer="91"/>
-<label x="149.86" y="38.1" size="1.778" layer="95"/>
+<wire x1="335.28" y1="30.48" x2="307.34" y2="30.48" width="0.1524" layer="91"/>
+<label x="325.12" y="30.48" size="1.778" layer="95"/>
 <pinref part="R7" gate="G$1" pin="1"/>
 </segment>
 </net>
@@ -8972,20 +8960,20 @@ Sensirion humdity sensor. Schematic element and footprint proven. Spark Fun Elec
 <segment>
 <pinref part="R5" gate="G$1" pin="2"/>
 <pinref part="R8" gate="G$1" pin="1"/>
-<wire x1="132.08" y1="40.64" x2="129.54" y2="40.64" width="0.1524" layer="91"/>
-<wire x1="129.54" y1="40.64" x2="129.54" y2="45.72" width="0.1524" layer="91"/>
-<wire x1="129.54" y1="40.64" x2="109.22" y2="40.64" width="0.1524" layer="91"/>
-<junction x="129.54" y="40.64"/>
-<label x="109.22" y="40.64" size="1.778" layer="95"/>
+<wire x1="307.34" y1="33.02" x2="304.8" y2="33.02" width="0.1524" layer="91"/>
+<wire x1="304.8" y1="33.02" x2="304.8" y2="38.1" width="0.1524" layer="91"/>
+<wire x1="304.8" y1="33.02" x2="284.48" y2="33.02" width="0.1524" layer="91"/>
+<junction x="304.8" y="33.02"/>
+<label x="284.48" y="33.02" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="U$1" gate="G$1" pin="SCK"/>
-<wire x1="129.54" y1="88.9" x2="137.16" y2="88.9" width="0.1524" layer="91"/>
-<label x="132.08" y="88.9" size="1.778" layer="95"/>
+<wire x1="304.8" y1="81.28" x2="312.42" y2="81.28" width="0.1524" layer="91"/>
+<label x="307.34" y="81.28" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="185.42" y1="86.36" x2="177.8" y2="86.36" width="0.1524" layer="91"/>
-<label x="177.8" y="86.36" size="1.778" layer="95"/>
+<wire x1="360.68" y1="78.74" x2="353.06" y2="78.74" width="0.1524" layer="91"/>
+<label x="353.06" y="78.74" size="1.778" layer="95"/>
 <pinref part="U$2" gate="G$1" pin="SCL"/>
 </segment>
 </net>
@@ -8993,20 +8981,20 @@ Sensirion humdity sensor. Schematic element and footprint proven. Spark Fun Elec
 <segment>
 <pinref part="R7" gate="G$1" pin="2"/>
 <pinref part="R13" gate="G$1" pin="1"/>
-<wire x1="121.92" y1="38.1" x2="119.38" y2="38.1" width="0.1524" layer="91"/>
-<wire x1="119.38" y1="38.1" x2="119.38" y2="45.72" width="0.1524" layer="91"/>
-<wire x1="119.38" y1="38.1" x2="109.22" y2="38.1" width="0.1524" layer="91"/>
-<junction x="119.38" y="38.1"/>
-<label x="109.22" y="38.1" size="1.778" layer="95"/>
+<wire x1="297.18" y1="30.48" x2="294.64" y2="30.48" width="0.1524" layer="91"/>
+<wire x1="294.64" y1="30.48" x2="294.64" y2="38.1" width="0.1524" layer="91"/>
+<wire x1="294.64" y1="30.48" x2="284.48" y2="30.48" width="0.1524" layer="91"/>
+<junction x="294.64" y="30.48"/>
+<label x="284.48" y="30.48" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="U$1" gate="G$1" pin="DATA"/>
-<wire x1="129.54" y1="86.36" x2="137.16" y2="86.36" width="0.1524" layer="91"/>
-<label x="132.08" y="86.36" size="1.778" layer="95"/>
+<wire x1="304.8" y1="78.74" x2="312.42" y2="78.74" width="0.1524" layer="91"/>
+<label x="307.34" y="78.74" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="185.42" y1="88.9" x2="177.8" y2="88.9" width="0.1524" layer="91"/>
-<label x="177.8" y="88.9" size="1.778" layer="95"/>
+<wire x1="360.68" y1="81.28" x2="353.06" y2="81.28" width="0.1524" layer="91"/>
+<label x="353.06" y="81.28" size="1.778" layer="95"/>
 <pinref part="U$2" gate="G$1" pin="SDA"/>
 </segment>
 </net>
