@@ -9002,8 +9002,8 @@ Sensirion humdity sensor. Schematic element and footprint proven. Spark Fun Elec
 </sheet>
 </sheets>
 <errors>
-<approved hash="104,1,129.54,91.44,U$1,VDD,+3V3,,,"/>
-<approved hash="104,1,185.42,91.44,U$2,VCC,+3V3,,,"/>
+<approved hash="104,1,304.8,83.82,U$1,VDD,+3V3,,,"/>
+<approved hash="104,1,360.68,83.82,U$2,VCC,+3V3,,,"/>
 </errors>
 </schematic>
 </drawing>

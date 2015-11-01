@@ -139,22 +139,22 @@
 <text x="36.59" y="7.38" size="0.8128" layer="108" font="vector" ratio="15">3.7V
  bat</text>
 <text x="2.42" y="39.88" size="0.8128" layer="108" font="vector" ratio="15" rot="R90">gsm</text>
-<text x="23.83" y="10.27" size="0.8128" layer="109" font="vector" ratio="15">status</text>
+<text x="23.83" y="10.27" size="0.8128" layer="108" font="vector" ratio="15">status</text>
 <text x="47.81" y="54.51" size="1.016" layer="1" font="vector" ratio="15">1</text>
 <text x="48.65" y="54.55" size="1.016" layer="16" font="vector" ratio="15">2</text>
-<text x="45.41" y="10.78" size="0.8128" layer="109" font="vector" ratio="15">tp7</text>
-<text x="40.03" y="16.76" size="0.8128" layer="109" font="vector" ratio="15">github.com/rodan/gprs_i2c_gateway</text>
-<text x="40.01" y="18.17" size="0.8128" layer="109" font="vector" ratio="15">Petre Rodan 201510 rev1</text>
+<text x="45.41" y="10.78" size="0.8128" layer="108" font="vector" ratio="15">tp7</text>
+<text x="40.03" y="16.76" size="0.8128" layer="108" font="vector" ratio="15">github.com/rodan/gprs_i2c_gateway</text>
+<text x="40.01" y="18.17" size="0.8128" layer="108" font="vector" ratio="15">Petre Rodan 201510 rev1</text>
 <text x="2.68" y="8.3" size="0.8128" layer="108" font="vector" ratio="15" rot="R90">debug</text>
 <wire x1="7.38" y1="41.06" x2="4.58" y2="41.06" width="1.6764" layer="41"/>
 <rectangle x1="18.55" y1="5.3" x2="24.8" y2="10" layer="30"/>
-<text x="7.18" y="12.05" size="0.8128" layer="109" font="vector" ratio="15">tp8</text>
-<text x="45.53" y="52.63" size="0.8128" layer="109" font="vector" ratio="15">tp1</text>
-<text x="2.8" y="18.93" size="0.8128" layer="109" font="vector" ratio="15">tp2</text>
-<text x="1.67" y="17.64" size="0.8128" layer="109" font="vector" ratio="15">tp3</text>
-<text x="2.98" y="16.64" size="0.8128" layer="109" font="vector" ratio="15">tp4</text>
-<text x="4.19" y="15.65" size="0.8128" layer="109" font="vector" ratio="15">tp5</text>
-<text x="21.29" y="15.12" size="0.8128" layer="109" font="vector" ratio="15">tp6</text>
+<text x="7.18" y="12.05" size="0.8128" layer="108" font="vector" ratio="15">tp8</text>
+<text x="45.53" y="52.63" size="0.8128" layer="108" font="vector" ratio="15">tp1</text>
+<text x="2.8" y="18.93" size="0.8128" layer="108" font="vector" ratio="15">tp2</text>
+<text x="1.67" y="17.64" size="0.8128" layer="108" font="vector" ratio="15">tp3</text>
+<text x="2.98" y="16.64" size="0.8128" layer="108" font="vector" ratio="15">tp4</text>
+<text x="4.19" y="15.65" size="0.8128" layer="108" font="vector" ratio="15">tp5</text>
+<text x="21.29" y="15.12" size="0.8128" layer="108" font="vector" ratio="15">tp6</text>
 <text x="59.37" y="7.33" size="0.8128" layer="108" font="vector" ratio="15">i2c</text>
 <text x="27.26" y="7.3" size="0.8128" layer="108" font="vector" ratio="15">ts</text>
 <hole x="3" y="3" drill="3.2"/>
