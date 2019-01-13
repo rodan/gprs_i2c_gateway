@@ -12,25 +12,25 @@ CC_DMACH	= -D__MSP430F5510__
 # are used for dead code elimination, see:
 # http://gcc.gnu.org/ml/gcc-help/2003-08/msg00128.html
 #
-CFLAGS		+= $(CC_CMACH) $(CC_DMACH) -Wall -Wno-switch
+CFLAGS		+= $(CC_CMACH) $(CC_DMACH) -Wall
 CFLAGS		+= -fno-force-addr -finline-limit=1 -fno-schedule-insns
 CFLAGS		+= -fshort-enums -Wl,-Map=output.map
-LDFLAGS		= -lm
+LDFLAGS		=
 
 CFLAGS_REL	+= -Os -fdata-sections -ffunction-sections -fomit-frame-pointer
 LDFLAGS_REL	+= -Wl,--gc-sections -Wl,-s
 
-CFLAGS_DBG	+= -O1 -g
+CFLAGS_DBG	+= -O1 -ggdb
 LDFLAGS_DBG	+= -Wl,--gc-sections
 
 # linker flags and include directories
 INCLUDES	+= -I./ -Igcc/ -Idrivers/
 ### Build tools
 # 
-CC		= msp430-gcc
-LD		= msp430-ld
-AS		= msp430-as
-AR		= msp430-ar
+CC              = msp430-elf-gcc
+LD              = msp430-elf-ld
+AS              = msp430-elf-as
+AR              = msp430-elf-ar
 
 BASH := $(shell which bash || which bash)
 
@@ -87,8 +87,7 @@ $(OBJS): $(PROJ).cflags
 
 $(PROJ).elf: $(OBJS)
 	@echo -e "\n>> Building $@ as target $(TARGET)"
-	@$(CC) $(CFLAGS) $(LDFLAGS) $(INCLUDES) -o $@ $+ && size $@ && bash tools/setver.sh
-	@#@python tools/msp430-ram-usage $@
+	@$(CC) $(CFLAGS) $(LDFLAGS) $(INCLUDES) -o $@ $+ && size $@
 
 modinit.o: modinit.c
 	@echo "CC $<"
@@ -111,13 +110,13 @@ tags: $(SRCS)
 
 install: $(PROJ).elf
 	@bash ~/bin/burn.sh
-	@#mspdebug olimex-iso-mk2 "prog $<"
+	#@mspdebug olimex-iso-mk2 "prog $<"
 
 clean: $(SUBDIRS)
 	@for subdir in $(SUBDIRS); do \
 		echo "Cleaning $$subdir .."; rm -f $$subdir/*.o; \
 	done
-	@rm -f *.o $(PROJ).{elf,txt,cflags,dep} output.map
+	@rm -f *.o $(PROJ).{elf,cflags,dep} output.map
 
 doc:
 	rm -rf doc/*
